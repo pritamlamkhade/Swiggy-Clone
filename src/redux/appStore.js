@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "../auth/userSlice";
+import userReducer from "./userSlice";
 
 // Step 1: Load user from localStorage
 const persistedUser = localStorage.getItem("user")
