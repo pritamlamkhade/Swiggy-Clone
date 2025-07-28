@@ -83,7 +83,7 @@ npm start
 
 ## 📄 License
 
-This project is for educational purposes. It is not affiliated with or endorsed by Swiigy.
+This project is for educational purposes. It is not affiliated with or endorsed by Swiggy.
 
 ## 🙋‍♂️ Contributing
 

@@ -1,7 +1,6 @@
 import { CDN_URL, RATING } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
-  console.log(resData);
   return (
     <div className="res-card">
       <img src={CDN_URL + resData?.img} className="res-img" alt="res-img"></img>
