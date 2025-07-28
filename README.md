@@ -53,21 +53,32 @@ src/
 
 ## 🚀 Getting Started
 
-### Clone & Install
+1. **Clone the repo**
 
-```bash
-# Clone the repo
-git clone https://github.com/pritamlamkhade/Swiggy.git
+   ```bash
+   git clone https://github.com/pritamlamkhade/Swiggy-Clone.git
+   cd Swiggy-Clone
+   ```
 
-# Navigate to project directory
-cd Swiggy
+2. **Install dependencies**
 
-# Install dependencies
-npm install
+   ```bash
+   npm install
+   ```
 
-# Start development server
-npm start
-```
+3. **Setup **`env`** file**
+
+   ```env
+   REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+   REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+
+   ```
+
+4. **Run the app**
+
+   ```bash
+   npm start
+   ```
 
 ---
 
