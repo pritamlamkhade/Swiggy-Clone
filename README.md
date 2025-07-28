@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# 🍽️ Swiggy Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive Swiggy-inspired food delivery web application built with **React**, **Redux**, and **Tailwind CSS**. This project replicates key Swiggy features including restaurant listings, authentication, search, cart management, offers, theming, and user preferences.
 
-## Available Scripts
+> 🔐 Includes protected routes, theme toggle, and multi-language support, Shimmer Loading placeholders for better UX .
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✅ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🟢 Public Routes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 👤 **Login & Signup** – User authentication flow
+- 🏠 **Landing Page** – Public homepage showing restaurants
 
-### `npm test`
+### 🔒 Private Routes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🧑‍💼 **User Account** – Profile and preferences
+- 🈳 **Language Selector** – Switch UI language (i18n-ready)
+- 🌗 **Theme Toggle** – Light/Dark mode support
+- 🍴 **Restaurants** – Browse and view restaurant menus
+- 🔍 **Search** – Search restaurants or food items
+- 🎟️ **Offers** – List of current promotional offers
+- 🛒 **Cart & Checkout** – Add/remove items, view cart, checkout flow
+- 🆘 **Help/Support** – Static support or FAQ page
+- 📦 **My Account** – View user data or order details (WIP)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Frontend    | State Management | Styling     | Routing          | Auth          | i18n          | Other Tools        |
+| ----------- | ---------------- | ----------- | ---------------- | ------------- | ------------- | ------------------ |
+| React (CRA) | Redux Toolkit    | TailwindCSS | React Router DOM | Firebase Auth | react-i18next | Axios, React Icons |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── assets/
+├── components/
+├── pages/
+├── redux/
+├── routes/
+├── utils/
+├── App.js
+└── index.js
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Clone & Install
 
-## Learn More
+```bash
+# Clone the repo
+git clone https://github.com/pritamlamkhade/Swiggy.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Navigate to project directory
+cd Swiggy
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Install dependencies
+npm install
 
-### Code Splitting
+# Start development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📌 TODO / Upcoming
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [ ] Integrate real Swiggy API (with CORS proxy)
+- [ ] Razorpay / Stripe checkout integration
+- [ ] Admin dashboard (restaurant owner panel)
+- [ ] Order tracking (WebSocket or polling)
+- [ ] Add tests with Jest + React Testing Library
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📄 License
 
-### Advanced Configuration
+This project is for educational purposes. It is not affiliated with or endorsed by Swiigy.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🙋‍♂️ Contributing
 
-### Deployment
+Pull requests are welcome. If you find a bug or want to propose a feature, feel free to [open an issue](https://github.com/pritamlamkhade/Swiggy/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👨‍💻 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Pritam Lamkhade](https://www.linkedin.com/in/pritamlamkhade/)
+
+---
+
+## ⭐️ Show Support
+
+If you like this project, leave a ⭐️ and consider sharing!
