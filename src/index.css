@@ -17,6 +17,19 @@ btn-filter-widget
     font-size: 14px;
     cursor: pointer;
 }
+.home-header-btn{
+   text-transform: capitalize;
+    display: inline-block;
+    max-width: 140px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    cursor: pointer;
+}
 .header-btn
 {
     text-transform: capitalize;
