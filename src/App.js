@@ -1,7 +1,13 @@
-import "./App.css";
+import Header from "./components/Header";
+import Body from "./components/Body";
 
-function App() {
-  return <div className="text-center p-10">Swiggy</div>;
-}
+const App = () => {
+  return (
+    <div className="bg-[#fefefe] h-[100vw] flex flex-col">
+      <Header />
+      <Body />
+    </div>
+  );
+};
 
 export default App;
