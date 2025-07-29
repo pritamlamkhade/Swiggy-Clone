@@ -193,3 +193,14 @@ btn-filter-widget
     color: white;
     font-weight: bold;
 }
+.overlay{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #02060c;
+    opacity: .7;
+    overflow: hidden;
+}
