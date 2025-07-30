@@ -64,7 +64,7 @@ btn-filter-widget
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
 }
-.one-card.res-card
+.one-card .res-card
 {
   margin-top: -36px;
 }
