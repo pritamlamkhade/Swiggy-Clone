@@ -1,5 +1,7 @@
 {
   "name": "swiggy-clone",
+  "homepage": "https://swiggy-clone-b6190.web.app",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -64,6 +64,8 @@ export const signOutUser = async () => {
 
 export const sendOtp = async (phoneNumber) => {
   try {
+    if (!auth) throw new Error("Firebase Auth not initialized");
+
     if (!window.recaptchaVerifier) {
       window.recaptchaVerifier = new RecaptchaVerifier(
         "recaptcha-container",
@@ -76,7 +78,7 @@ export const sendOtp = async (phoneNumber) => {
         auth
       );
 
-      await window.recaptchaVerifier.render(); // ✅ This is necessary
+      await window.recaptchaVerifier.render();
     }
 
     const confirmationResult = await signInWithPhoneNumber(
@@ -88,7 +90,7 @@ export const sendOtp = async (phoneNumber) => {
     window.confirmationResult = confirmationResult;
     return confirmationResult;
   } catch (error) {
-    console.error("OTP sending failed:", error);
+    console.error("OTP sending failed:", error.message, error);
     throw error;
   }
 };
