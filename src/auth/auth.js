@@ -68,14 +68,14 @@ export const sendOtp = async (phoneNumber) => {
 
     if (!window.recaptchaVerifier) {
       window.recaptchaVerifier = new RecaptchaVerifier(
+        auth,
         "recaptcha-container",
         {
           size: "invisible",
           callback: (response) => {
             console.log("reCAPTCHA solved", response);
           },
-        },
-        auth
+        }
       );
 
       await window.recaptchaVerifier.render();

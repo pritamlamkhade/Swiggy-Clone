@@ -1,11 +1,47 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { sendOtp, verifyOtp } from "../auth/auth";
 import { LOGIN_RENDERER } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addUser } from "../redux/userSlice";
+import { updateProfile } from "firebase/auth";
 
 const Login = ({ closeLogin }) => {
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [isSignUp, SetIsSignUp] = useState(false);
+  const userName = useRef(null);
+  const dispatch = useDispatch();
+
+  const handleVerify = async () => {
+    try {
+      const userCredential = await verifyOtp(otp);
+
+      if (!userCredential) return;
+
+      const user = userCredential;
+      const { uid, phoneNumber } = user;
+
+      let displayName = user.displayName;
+
+      // If signing up, set displayName from input
+      if (isSignUp) {
+        if (userName.current.value) {
+          await updateProfile(user, { displayName: userName.current.value });
+          displayName = userName.current.value;
+        }
+      }
+      console.log(user);
+      dispatch(
+        addUser({
+          uid,
+          mobile: phoneNumber,
+          displayName,
+        })
+      );
+    } catch (error) {
+      console.error("OTP verification failed:", error.message);
+    }
+  };
 
   return (
     <>
@@ -28,7 +64,7 @@ const Login = ({ closeLogin }) => {
             className="text-left mb-4 text-[#ff5200] font-bold"
             onClick={() => SetIsSignUp((prev) => !prev)}
           >
-            {isSignUp ? "create an account" : "login to your account"}
+            {!isSignUp ? "create an account" : "login to your account"}
           </button>
         </div>
 
@@ -52,13 +88,14 @@ const Login = ({ closeLogin }) => {
           <>
             <input
               placeholder="Name"
+              ref={userName}
               className="h-[70px] w-[360px] border border-gray-300 p-2"
             />
 
-            <input
+            {/* <input
               placeholder="Email"
               className="h-[70px] w-[360px] border border-gray-300 p-2"
-            />
+            /> */}
 
             <button className="text-[#5d8ed5]/80 text-left mt-6 font-bold">
               Have a referral code?
@@ -73,7 +110,7 @@ const Login = ({ closeLogin }) => {
           Send OTP
         </button>
 
-        {/* <input
+        <input
           value={otp}
           onChange={(e) => setOtp(e.target.value)}
           placeholder="One time password"
@@ -81,11 +118,11 @@ const Login = ({ closeLogin }) => {
         />
 
         <button
-          onClick={() => verifyOtp(otp)}
+          onClick={handleVerify}
           className="h-[50px] w-[360px] bg-[#ff5200] text-white"
         >
           Verify
-        </button> */}
+        </button>
 
         <span className="text-xs w-[360px] py-1">
           By clicking on Login, I accept the{" "}
