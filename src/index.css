@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-btn-filter-widget
+.btn-filter-widget
 {
     color: #02060cbf;
     background-color: #fff;
@@ -203,4 +203,9 @@ btn-filter-widget
     background: #02060c;
     opacity: .7;
     overflow: hidden;
+}
+
+.res-menu
+{
+    box-shadow: 4px 4px 6px 4px #8080801a, -8px 7px 20px 6px #80808026;
 }

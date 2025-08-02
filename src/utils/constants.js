@@ -26,3 +26,9 @@ export const HOME_BG2 =
 
 export const LOGIN_RENDERER =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r";
+
+export const ONE_LOGO =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_86,h_30/v1634558776/swiggy_one/OneLogo_3x.png";
+
+export const OFFER_LOGO =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_96,h_96/offers/generic";

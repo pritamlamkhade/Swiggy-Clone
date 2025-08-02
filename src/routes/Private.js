@@ -7,6 +7,7 @@ import {
 import { ROUTES } from "./routes";
 import BrowsePage from "../pages/BrowsePage";
 import Search from "../pages/Search";
+import RestaurantMenu from "../components/RestaurantMenu";
 
 const Private = () => {
   const appRouter = createBrowserRouter([
@@ -21,6 +22,10 @@ const Private = () => {
     {
       path: ROUTES.HOME,
       element: <Navigate to={ROUTES.BROWSE} replace />,
+    },
+    {
+      path: ROUTES.RESTAURANT_DETAIL,
+      element: <RestaurantMenu />,
     },
   ]);
 

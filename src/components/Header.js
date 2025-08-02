@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signOutUser } from "../auth/auth";
 import { removeUser } from "../redux/userSlice";
 import { LOGO } from "../utils/constants";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes/routes";
 
 const Header = () => {
@@ -20,20 +20,18 @@ const Header = () => {
     }
   };
 
-  const HandleSearchClick = () => {
-    navigate(ROUTES.SEARCH);
-  };
-
   return (
     <div className="fixed w-full h-[80px] bg-white flex justify-between shadow shadow-gray-300 top-0 z-[1000]">
       <div className="flex items-center">
-        <img src={LOGO} alt="logo" className="h-[80px] min-w-[132px]"></img>
+        <Link to={ROUTES.BROWSE}>
+          <img src={LOGO} alt="logo" className="h-[80px] min-w-[132px]"></img>
+        </Link>
         <div className="header-btn address min-w-[50px]">Home</div>
         <span className="address-span">Kharadi, Pune</span>
       </div>
       <ul className="flex items-center gap-12 mx-4 mr-10">
-        <li className="header-btn" onClick={HandleSearchClick}>
-          Search
+        <li className="header-btn">
+          <Link to={ROUTES.SEARCH}>Search</Link>
         </li>
         <li className="header-btn">Offers</li>
         <li className="header-btn">Help</li>

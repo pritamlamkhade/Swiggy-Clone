@@ -1,8 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import { CDN_URL, RATING } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
+  const navigate = useNavigate();
+
+  const HandleClick = () => {
+    navigate(`/restaurant/${resData?.id}`);
+  };
+
   return (
-    <div className="res-card">
+    <div className="res-card" onClick={HandleClick}>
       <img src={CDN_URL + resData?.img} className="res-img" alt="res-img"></img>
       <div className="p-2">
         <h2 className="font-bold res-name">{resData?.name}</h2>
